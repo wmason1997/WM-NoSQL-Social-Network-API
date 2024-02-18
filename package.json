@@ -1,5 +1,5 @@
 {
-    "name": "WM NoSQL Social Network API",
+    "name": "WM-NoSQL-Social-Network-API",
     "version": "1.0.1",
     "description": "Mongoose back-end project",
     "main": "index.js",
