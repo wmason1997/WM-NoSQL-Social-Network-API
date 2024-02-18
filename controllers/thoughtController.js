@@ -14,7 +14,7 @@ module.exports = {
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtId })
-        .populate('users');
+        .populate('username');
 
       if (!thought) {
         return res.status(404).json({ message: 'No thought with that ID' });
@@ -68,6 +68,33 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
+    // Create a reaction to a thought
+    async createReaction(req, res) {
+        try {
+          const { thoughtId } = req.params;
+          const { reactionBody, username } = req.body;
+      
+          const updatedThought = await Thought.findOneAndUpdate(
+            { _id: thoughtId },
+            { $push: { reactions: { reactionBody, username } } },
+            { new: true }
+          );
+      
+          if (!updatedThought) {
+            return res.status(404).json({ message: 'No thought with this id!' });
+          }
+      
+          res.json(updatedThought);
+        } catch (err) {
+          res.status(500).json(err);
+        }
+      
+  },
+  
+    // Delete a reaction to a thought
+
+  
 };
 
 
