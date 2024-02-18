@@ -47,7 +47,7 @@ const { User, Thought }  = require('../models');
         res.status(500).json(err);
       }
     },
-    // Delete a user and remove them from the course
+    // Delete a user and remove them from list
     async deleteUser(req, res) {
       try {
         const user = await User.findOneAndRemove({ _id: req.params.userId });
