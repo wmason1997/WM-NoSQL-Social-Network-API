@@ -2,7 +2,7 @@ const { ObjectId } = require('mongoose').Types;
 const { User, Thought }  = require('../models');
 
 // May need to add aggregate functions here  
-
+// userCount
 
   module.exports = {
     // Get all users
@@ -75,7 +75,7 @@ const { User, Thought }  = require('../models');
       }
     },
   
-    // Add an assignment to a user
+    // Add a friend to a user
     async addFriend(req, res) {
       console.log('You are adding a friend');
       console.log(req.body);
