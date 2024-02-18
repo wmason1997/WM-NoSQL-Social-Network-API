@@ -1,7 +1,9 @@
-const {ObjectId} = require('mongoose').Types;
+const { ObjectId } = require('mongoose').Types;
 const { User, Thought }  = require('../models');
 
-  
+// May need to add aggregate functions here  
+
+
   module.exports = {
     // Get all users
     async getUsers(req, res) {
@@ -96,12 +98,12 @@ const { User, Thought }  = require('../models');
         res.status(500).json(err);
       }
     },
-    // Remove assignment from a user
-    async removeAssignment(req, res) {
+    // Remove friend from a user
+    async removeFriend(req, res) {
       try {
         const user = await User.findOneAndUpdate(
           { _id: req.params.userId },
-          { $pull: { assignment: { assignmentId: req.params.assignmentId } } },
+          { $pull: { friends: { friendId: req.params.friendId } } },
           { runValidators: true, new: true }
         );
   
