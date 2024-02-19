@@ -50,18 +50,21 @@ const { User, Thought }  = require('../models');
     // Delete a user and remove them from list
     async deleteUser(req, res) {
       try {
-        const user = await User.findOneAndRemove({ _id: req.params.userId });
+          const user = await User.findOneAndRemove({ _id: req.params.userId });
   
-        if (!user) {
-          return res.status(404).json({ message: 'No such user exists' });
-        }
+          if (!user) {
+              return res.status(404).json({ message: 'No such user exists' });
+          }
   
-        res.json({ message: 'User successfully deleted' });
+          // Delete corresponding thoughts of the user
+          await Thought.deleteMany({ userId: req.params.userId });
+  
+          res.json({ message: 'User and associated thoughts successfully deleted' });
       } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+          console.log(err);
+          res.status(500).json(err);
       }
-    },
+  },
 
     // Update a user
     async updateUser(req, res) {
