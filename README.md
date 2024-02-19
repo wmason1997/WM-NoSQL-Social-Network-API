@@ -49,7 +49,7 @@ I had a tutoring session with Jacob Carver on 02/17/2024 and they helped me to s
 AskBCS Assistance
 Charles helped me to realize I needed a leading / in my router.use() lines in my routes/api/index.js. Thank you, Charles!
 
-Quinton pointed out a relic of my mini-project code that was causing errors in my thought creation route. I had not been exporting the Thought model and instead was still accidentally exporting the Course model.
+Quinton pointed out a relic of my mini-project code that was causing errors in my thought creation route. I had not been exporting the Thought model and instead was still accidentally exporting the Course model. Thank you, Quinton!
 
 Xpert Learning Assistant
 Xpert helped me to realize my getThoughts() method in thoughtController.js needed to be populating with 'username' rather than 'users' and with various other debugging issues.
