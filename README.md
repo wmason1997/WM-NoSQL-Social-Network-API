@@ -5,10 +5,9 @@
 * [Description](#description)
 * [Installation](#installation-instructions)
 * [Usage](#usage-instructions)
-* [Deployed Application](#deployed-application)
+* [Video Walkthrough](#video)
 * [Screenshots](#screenshots)
 * [Contributing](#contribution-guidelines)
-* [Tests](#tests)
 * [Questions](#questions)
 * [Credits](#credits)
 
@@ -22,17 +21,15 @@ git clone this repository, run npm i
 ## Usage <a name="usage-instructions"></a>
 npm run start and then do all your testing with Insomnia or a similar application.
 
-## Deployed Application <a name = "deployed-application"></a>
+## Video Walkthrough <a name = "video"></a>
 
+The walkthrough video can be found here: [https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing](https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing).
 
 ## Screenshots <a name = "screenshots"></a>
   
 
 ## Contributing <a name="contribution-guidelines"></a>
 Be respectful.
-
-## Tests <a name="tests"></a> 
-N/A
 
 ## Questions <a name="questions">
 Please feel free to reach out to me with questions or suggestions for this app.<br>
@@ -50,6 +47,5 @@ Charles helped me to realize I needed a leading / in my router.use() lines in my
 
 Quinton pointed out a relic of my mini-project code that was causing errors in my thought creation route. I had not been exporting the Thought model and instead was still accidentally exporting the Course model.
 
-Xpert Learning Assistance
-
+Xpert Learning Assistant
 Xpert helped me to realize my getThoughts() method in thoughtController.js needed to be populating with 'username' rather than 'users'
