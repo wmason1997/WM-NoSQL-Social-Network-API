@@ -6,7 +6,6 @@
 * [Installation](#installation-instructions)
 * [Usage](#usage-instructions)
 * [Video Walkthrough](#video)
-* [Screenshots](#screenshots)
 * [Contributing](#contribution-guidelines)
 * [Questions](#questions)
 * [Credits](#credits)
@@ -23,10 +22,7 @@ npm run start and then do all your testing with Insomnia or a similar applicatio
 
 ## Video Walkthrough <a name = "video"></a>
 
-The walkthrough video can be found here: [https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing](https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing).
-
-## Screenshots <a name = "screenshots"></a>
-  
+The walkthrough video can be found here: [https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing](https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing).  
 
 ## Contributing <a name="contribution-guidelines"></a>
 Be respectful.
@@ -38,7 +34,7 @@ My email is williamcmason1997@gmail.com
 
 ## Credits
 
-https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax
+[https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax) was the page I referenced for email address validation.
 
 I had a tutoring session with Jacob Carver on 02/17/2024 and they helped me to see the similarities between the mini project (student ~ user, courses ~ thoughts, etc.) and this assignment.
 
