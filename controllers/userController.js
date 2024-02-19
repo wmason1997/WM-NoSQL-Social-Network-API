@@ -56,18 +56,6 @@ const { User, Thought }  = require('../models');
           return res.status(404).json({ message: 'No such user exists' });
         }
   
-        // const course = await Course.findOneAndUpdate(
-        //   { users: req.params.userId },
-        //   { $pull: { users: req.params.userId } },
-        //   { new: true }
-        // );
-  
-        // if (!course) {
-        //   return res.status(404).json({
-        //     message: 'User deleted, but no courses found',
-        //   });
-        // }
-  
         res.json({ message: 'User successfully deleted' });
       } catch (err) {
         console.log(err);
@@ -78,7 +66,7 @@ const { User, Thought }  = require('../models');
     // Add a friend to a user
     async addFriend(req, res) {
       console.log('You are adding a friend');
-      console.log(req.body);
+      console.log(req.params);
   
       try {
         const user = await User.findOneAndUpdate(
@@ -103,7 +91,7 @@ const { User, Thought }  = require('../models');
       try {
         const user = await User.findOneAndUpdate(
           { _id: req.params.userId },
-          { $pull: { friends: { friendId: req.params.friendId } } },
+          { $pull: { friends: req.params.friendId } },
           { runValidators: true, new: true }
         );
   
