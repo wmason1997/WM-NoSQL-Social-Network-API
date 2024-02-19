@@ -52,4 +52,4 @@ Charles helped me to realize I needed a leading / in my router.use() lines in my
 Quinton pointed out a relic of my mini-project code that was causing errors in my thought creation route. I had not been exporting the Thought model and instead was still accidentally exporting the Course model.
 
 Xpert Learning Assistant
-Xpert helped me to realize my getThoughts() method in thoughtController.js needed to be populating with 'username' rather than 'users'
+Xpert helped me to realize my getThoughts() method in thoughtController.js needed to be populating with 'username' rather than 'users' and with various other debugging issues.
