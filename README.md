@@ -15,17 +15,25 @@
 I have built an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, adn the Mongoose ODM.
 
 ## Installation <a name="installation-instructions"></a>
-git clone this repository, run npm i
+git clone this repository and then:
+
+```md
+npm i
+```
 
 ## Usage <a name="usage-instructions"></a>
 npm run start and then do all your testing with Insomnia or a similar application.
+
+```md 
+npm run start
+```
 
 ## Video Walkthrough <a name = "video"></a>
 
 The walkthrough video can be found here: [https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing](https://drive.google.com/file/d/13AdkQ8SUlaMRPfwAA5ykOTLaXdumQa_h/view?usp=sharing).  
 
 ## Contributing <a name="contribution-guidelines"></a>
-Be respectful.
+Please reach out at the contact below for any suggestions. Thanks!
 
 ## Questions <a name="questions">
 Please feel free to reach out to me with questions or suggestions for this app.<br>
