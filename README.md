@@ -42,7 +42,7 @@ My email is williamcmason1997@gmail.com
 
 ## Credits
 
-[https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax) was the page I referenced for email address validation.
+I referenced the following page for email address validation: [https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax](https://stackoverflow.com/questions/18022365/mongoose-validate-email-syntax).
 
 I had a tutoring session with Jacob Carver on 02/17/2024 and they helped me to see the similarities between the mini project (student ~ user, courses ~ thoughts, etc.) and this assignment.
 
