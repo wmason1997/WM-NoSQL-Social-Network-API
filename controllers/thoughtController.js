@@ -93,25 +93,47 @@ module.exports = {
   },
   
     // Delete a reaction to a thought
+    // async deleteReaction(req, res) {
+    //     try {
+    //       // const { thoughtId } = req.params;
+    //       // const { reactionId } = req.body;
+      
+    //       const thought = await Thought.findOneAndUpdate({ _id: thoughtId });
+      
+    //       if (!thought) {
+    //         return res.status(404).json({ message: 'No thought with that ID' });
+    //       }
+      
+    //       thought.reactions = thought.reactions.filter(reaction => reaction._id.toString() !== reactionId);
+    //       await thought.save();
+      
+    //       res.json({ message: 'Reaction deleted!' });
+    //     } catch (err) {
+    //       res.status(500).json(err);
+    //     }
+    //   }
+
     async deleteReaction(req, res) {
-        try {
-          const { thoughtId } = req.params;
-          const { reactionId } = req.body;
-      
-          const thought = await Thought.findOne({ _id: thoughtId });
-      
+      try {
+          const thought = await Thought.findOneAndUpdate(
+              { _id: req.params.thoughtId },
+              { $pull: { reactions: { reactionId: req.params.reactionId } } },
+              { runValidators: true, new: true }
+          );
+  
           if (!thought) {
-            return res.status(404).json({ message: 'No thought with that ID' });
+              return res.status(404).json({ message: 'No thought with that ID' });
           }
-      
-          thought.reactions = thought.reactions.filter(reaction => reaction._id.toString() !== reactionId);
-          await thought.save();
-      
-          res.json({ message: 'Reaction deleted!' });
-        } catch (err) {
-          res.status(500).json(err);
-        }
-      }
+
+        // Ensures the reaction is removed from the thought's reactions array
+        thought.reactions = thought.reactions.filter(reaction => reaction._id.toString() !== req.params.reactionId);
+        await thought.save();
+
+        res.json({ message: 'Reaction deleted!' });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
   
 };
 

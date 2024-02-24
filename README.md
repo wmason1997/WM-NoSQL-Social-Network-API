@@ -12,7 +12,7 @@
 
 
 ## Description <a name="description"></a> 
-I have built an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, adn the Mongoose ODM.
+I have built an API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
 ## Installation <a name="installation-instructions"></a>
 git clone this repository and then:
